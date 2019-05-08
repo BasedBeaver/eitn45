@@ -39,9 +39,9 @@ def code_tree(x, node):
         code_tree(x + "1", node.right)
 
 
-def distribution_entropy(probability_list):
+def distribution_entropy(prob_list):
     entropy = 0
-    for prob in probability_list:
+    for prob in prob_list:
         entropy -= prob * math.log(prob, 2)
     return entropy
 
@@ -61,26 +61,31 @@ def probability_list(node_list):
     return p_list
 
 
-# def avg_codeword1(code_dict):
-#     for k, v in code_dict.items():
-#         prob_value =
-
-
-def avg_codeword2(nbr_bits_coded, nbr_bytes_uncoded):
+def avg_codeword(nbr_bits_coded, nbr_bytes_uncoded):
     return nbr_bits_coded/nbr_bytes_uncoded
+
+
+def percentages_bits(bit_string):
+    total = 0
+    ones = 0
+    for bit in bit_string:
+        total += 1
+        if bit == "1":
+            ones += 1
+    return (total-ones)/total, ones/total
+
+
+def distribution(node_list):
+    dist_list = []
+    for node in node_list:
+        dist_list.append((chr(node.char), node.freq))
+    return dist_list
 
 
 str_alice = open('alice29.txt', 'rb').read()  # Read in file.txt byte-wise.
 item_nodes = [Node(a, len(list(b))) for a, b in groupby(sorted(str_alice))]
-
 prob_list = probability_list(item_nodes)
-
-
-# Double check probability sum equals 1
-sum = 0
-for prob in prob_list:
-    sum += prob
-print("\nSum of distribution probabilities: ", sum)  # This becomes 0.9999999999999997 and "not" 1 due to precision errors.
+dist_list = distribution(item_nodes)
 
 
 # Use built in heapq algorithm to make life easier and implement the simple huffman-tree algorithm
@@ -100,9 +105,14 @@ codes = {}
 code_tree("", item_nodes[0])
 corrected_codes = {chr(k): v for k, v in codes.items()}  # Change representation of keys from ASCII to chars
 coded_alice = "".join([codes[a] for a in str_alice])  # Code alice.txt with the Huffman-coding
+percentages_zeros, percentages_ones = percentages_bits(coded_alice)
 
+print("\nCharacter distribution: ", sorted(dist_list, key=lambda x: x[1], reverse=True))
 print("\nCharacter encodings: \n", corrected_codes, "\n")
 print("Length of compressed alice.txt in bytes: ", len(coded_alice)/8)  # Divide by 8 due to bits to bytes
-print("Average codeword length: ", avg_codeword2(len(coded_alice), len(str_alice)))
+print("Average codeword length: ", avg_codeword(len(coded_alice), len(str_alice)))
 print("Entropy of distribution: ", distribution_entropy(prob_list))
+print("\nTotal number of bits in coded alice: ", len(coded_alice))
+print("percentage of zeros: ", percentages_zeros)
+print("percentage of ones: ", percentages_ones)
 
