@@ -113,6 +113,5 @@ print("Length of compressed alice.txt in bytes: ", len(coded_alice)/8)  # Divide
 print("Average codeword length: ", avg_codeword(len(coded_alice), len(str_alice)))
 print("Entropy of distribution: ", distribution_entropy(prob_list))
 print("\nTotal number of bits in coded alice: ", len(coded_alice))
-print("percentage of zeros: ", percentages_zeros)
-print("percentage of ones: ", percentages_ones)
-
+print("Percentage of zeros: ", percentages_zeros)
+print("Percentage of ones: ", percentages_ones)

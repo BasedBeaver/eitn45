@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6530ddc-814a-4410-a6f7-b6005bce3077" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project2/project_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/project2/project_2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project2/project_2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="63" selection-start-line="63" selection-end-line="63" />
+            <state relative-caret-position="543">
+              <caret line="119" column="50" selection-start-line="119" selection-start-column="50" selection-end-line="119" selection-end-column="50" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -47,7 +48,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="67" />
     <option name="y" value="27" />
     <option name="width" value="927" />
@@ -65,11 +66,6 @@
             <path>
               <item name="eitn45" type="b2602c69:ProjectViewProjectNode" />
               <item name="eitn45" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="eitn45" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eitn45" type="462c0819:PsiDirectoryNode" />
-              <item name="project2" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -139,8 +135,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.project_2" />
       <item itemvalue="Python.onv1" />
+      <item itemvalue="Python.project_2" />
     </list>
     <recent_temporary>
       <list>
@@ -211,10 +207,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project2/node_class.py" />
+    <entry file="file://$PROJECT_DIR$/project2/alice29.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="39" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="6" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/project2/project_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        <state relative-caret-position="543">
+          <caret line="119" column="50" selection-start-line="119" selection-start-column="50" selection-end-line="119" selection-end-column="50" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
